@@ -1,48 +1,85 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8">
-    <title>Detail</title>
-</head>
-
-<body>
-    <header>
-
+    <head>
+        <meta charset="utf-8">
+        <title>Detail</title>
+    </head>
+    <body>
+        <header>
+            
+            <div>
+                <img src="assests/images/logo.png" alt="logo" height="200px" width="150px"/>
+                <a href="login.html" target="_self">Login</a>
+            </div>
+        </header>
         <div>
-            <img src="assests/images/logo.png" alt="logo" height="200px" width="150px" />
-            <a href="login.html" target="_self">Login</a>
-        </div>
-    </header>
-    <div>
-        <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" /><br>
-        <a href="payment.html">Book Now</a>
-        <h2>Radisson Blu Hotel</h2>
-        <h4>RATING</h4>
-        <P>5 star</P>
-        <h4>AMENITIES</h4>
-        <ul>
-            <li>Room Service</li>
-            <li>Restaurant</li>
-            <li>Business center</li>
-            <li>Fitness center</li>
-            <li>Pool</li>
-        </ul>
-        <h5>DESCRIPTION</h5>
-        <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit atque minima repellat dolorem commodi voluptate perspiciatis earum facilis, sed soluta rem! Aliquid saepe ipsum quas, voluptatem laborum rerum ipsam quisquam.</P>
+            <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg"/><br>
+            <div >
+                <!--margin-left: 4%; margin-right: 4%; margin-bottom: 1%;-->
+                <form action="payment.html" method="GET" target="_self" autocomplete="off">
+      
+      
+                  <ul style="list-style-type: none;">
+                    <li class="listSty">
+                      <label class="labelSty" for="adult">Adults:</label>
+                      <input class="inputSty" id="adults" type="number" id="adult" onfocus="call()" onchange="call()" name="adult" min="1" required autocomplete="off"
+                        value="1"><br />
+                    </li>
+      
+                    <li class="listSty">
+                      <label class="labelSty" for="name">Name:</label>
+                      <input class="inputSty" type="text" id="name" name="name1" required autocomplete="off"><br />
+                    </li>
+      
+                    <li class="listSty">
+                      <label class="labelSty" for="date1">From Date:</label>
+                      <input class="inputSty"   type="date" id="fromDate" name="date1" onchange="call()" required autocomplete="off" /><br />
+                    </li>
+      
+                    <li class="listSty">
+                      <label class="labelSty" for="date2">To Date:</label>
+                      <input class="inputSty toDate" type="date" name="date2" id="toDate" onchange="call()" required autocomplete="off" /><br />
+                    </li>
+      
+                    <li class="listSty">
+                      <label class="labelSty" for="price">Total:</label>
+                      <input class="inputSty total" type="text" name="price" id="price" autocomplete="off" readonly /><br />
+                    </li>
+      
+                    <li >
+                      <a href="payment.html" target="_self">
+                        <button type="submit" class="btn btn-outline-success" style="padding:3px" id="bookNow">Book
+                          Now</button>
+                      </a>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+            <h2>Radisson Blu Hotel</h2>
+            <h4>RATING</h4>
+            <P>5 star</P>
+            <h4>AMENITIES</h4>
+            <ul>
+                <li>Room Service</li>
+                <li>Restaurant</li>
+                <li>Business center</li>
+                <li>Fitness center</li>
+                <li>Pool</li>
+            </ul>
+            <h5>DESCRIPTION</h5>
+            <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit atque minima repellat dolorem commodi voluptate perspiciatis earum facilis, sed soluta rem! Aliquid saepe ipsum quas, voluptatem laborum rerum ipsam quisquam.</P>
 
-    </div>
-    <footer>
-        <div>
-            <a href="contact.html" target="_self">Contact Us</a><br>
-            <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" height="20px" width="22px"></a>
-            <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" height="20px" width="22px"></a>
-            <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" height="20px" width="22px"></a>
-            <p>&copy; 2020 ROOM SEARCH PVT.LTD</p>
         </div>
+        <footer>
+            <div>
+                <a href="contact.html" target="_self">Contact Us</a><br>
+                <a href="https://www.facebook.com" target="_blank"><img src="assests/images/facebook.png" height="20px" width="22px"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="assests/images/instagram.png" height="20px" width="22px"></a>
+                <a href="https://twitter.com" target="_blank"><img src="assests/images/twitter.png" height="20px" width="22px"></a>
+                <p>&copy; 2020 ROOM SEARCH PVT.LTD</p>
+            </div>
         </div>
-    </footer>
+        </footer>
 
-</body>
-
+    </body>
 </html>
