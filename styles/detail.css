@@ -1,94 +1,172 @@
-.mainDiv{
-  margin-left: 4% !important;
-  margin-right: 4% !important;
-  margin-top: 20%;
-  margin-bottom: 2%;
+.detail-img {
+  height: 500px;
+  width: 500px;
+  margin: auto;
 }
 
-.imgDiv{
-
-  border: 1px solid black
+#description {
+  margin: 0% 4% 2% 4%;
+  padding-bottom: 2%;
 }
 
-.formDiv{
-
-
-padding: 20px; 
-border-left: 1px; 
-border-top: 1px;
-border-right: 1px; 
-border-bottom: 1px; 
-border-style: solid;
-border-color: black;
-
+#detail-box {
+  height: 400px;
+  max-height: 400px;
+  margin: 4% 2%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+  justify-content: center;
 }
 
-.listSty{
-  display: flex; 
-  padding: 1em;
-}
-.labelSty{
- flex:1;
-}
-.inputSty{
- width:60%;
+#detail-box > *:last-child {
+  max-height: 400px;
+  margin: 1% 0;
+  flex-grow: 1;
+  margin: 0 auto;
+  border-left: 1px solid black;
 }
 
+#detail-form div {
+  padding: 0 4%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+#detail-form input  {
+  width: 60%;
+  height: fit-content;
+}
 
-.carousel-control-prev-icon,
+#book-btn {
+  align-self: center;
+}
+
+#detail-form {
+  height: 100%;
+  max-height: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+h3,
+h4 {
+  font-family: cursive;
+}
+
+#detail-carousel > div {
+  max-height: 400px;
+  max-width:80%;
+  margin: auto;
+}
+
+#detail-carousel {
+  max-height: 400px;
+  width: 70%;
+}
+
+main {
+  overflow: auto;
+}
+
+/* Carousal control icons */
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23bc8f8f' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
 .carousel-control-next-icon {
-height: 50px;
-width: 50px;
-background-image: none !important;
-margin-top: 29%;
-}
-.carousel-control-next-icon:after
-{
-content: '>';
-font-size: 55px;
-color: rosybrown; 
-
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23bc8f8f' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
-.carousel-control-prev-icon:after {
-content: '<';
-font-size: 55px;
-color: rosybrown;
+/* Media queries */ 
 
-}
+/* For small screens */
+@media only screen and (max-width: 575px) {
+  #detail-box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    max-height: 100vh;
+    flex-wrap: nowrap;
+  } 
 
-.carousel-control-next,
-.carousel-control-prev {
-  z-index: 0;
-
-}
-.carousel-image {
-  max-height: 370px;
-}
-
-
-
-.image{
-  margin-top: 5%;
-  margin-left: 1%;
-  margin-bottom: 5%;
-  width: 100%;
-  height: 2hvh;
-}
-@media only screen and (min-width: 800px){
-  .image{
-      width: 50%;
-      margin-left: 25%;
-      height: 450px;
+  #detail-box > div:first-child {
+    width: 100%;
+    height: 50%;
   }
 
-  .carousel-control-prev-icon,
+  main {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  #detail-carousel {
+    height: 100%;
+    width: 100%;
+  }
+  .detail-img {
+    height: 250px;
+    width: 100%;
+    margin: auto;
+  }
+
+  #detail-carousel > div {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  #detail-form {
+    max-height: 100%;
+  }
+
+  #form-div {
+    height: 100%;
+    padding-top: 5%;
+  }
+  #detail-box > *:last-child {
+    border-left: none;
+  }
+
+/* Carousal control icons */
+  .carousel-control-prev-icon {
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+  }
+
   .carousel-control-next-icon {
-    margin-top: 23%;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  }
+}
+
+/* For medium sized screens */
+@media only screen and (min-width:576px) and (max-width:768px) {
+  #detail-carousel > div {
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
   }
 
-  .mainDiv{
-      margin-top: 7%;
+  #detail-box {
+    flex-wrap: nowrap;
   }
-} 
+
+  #detail-box > div:first-child {
+    max-width: 60%;
+  }
+
+  #detail-carousel {
+    padding: 1%;
+  }
+
+  .detail-img {
+    height: 400px;
+    width: 100%;
+    margin: auto;
+  }
+}
