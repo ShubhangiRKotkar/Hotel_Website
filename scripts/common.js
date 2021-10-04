@@ -2,15 +2,15 @@ const headerEl = document.getElementsByTagName('header')[0]; // Header Div
 const footerEl = document.getElementsByTagName('footer')[0]; // Footer Dov
 
 // Header template
-headerEl.innerHTML = 
-`<a id="logo-link" href="index.html">
+headerEl.innerHTML =
+    `<a id="logo-link" href="index.html">
   <img id= "logo" src = "assests/images/logo.png" alt = "logo" height = "100" width = "150">
 </a>
 <button id="login" class="btn btn-light" data-toggle="modal" data-target="#loginModal">Login</button>`
 
 // Footer template
-footerEl.innerHTML = 
-`<button id="contact" class="btn btn-info" data-toggle="modal" data-target="#contactModal">Contact us</button>
+footerEl.innerHTML =
+    `<button id="contact" class="btn btn-info" data-toggle="modal" data-target="#contactModal">Contact us</button>
 <div id="social">
   <a href = "https://www.facebook.com"><img src = "assests/images/facebook.png" alt="facebook" height = "20px" width = "20px"></a>
   <a href = "https://www.instagram.com"><img src = "assests/images/instagram.png" alt="instagram" height = "20px" width = "20px"></a>
@@ -22,8 +22,8 @@ footerEl.innerHTML =
 
 const loginEl = document.getElementById("loginModal"); //Login Modal
 // Login modal template
-loginEl.innerHTML = 
-`  <div class="modal-dialog">
+loginEl.innerHTML =
+    `  <div class="modal-dialog">
 <div class="modal-content">
   <div class="modal-header">
     <h5 class="modal-title w-100 text-center">Login</h5>
@@ -54,10 +54,10 @@ loginEl.innerHTML =
 const contactEl = document.getElementById("contactModal"); // Contact Modal
 // Contact modal template
 contactEl.innerHTML =
-`<div class="modal-dialog">
+    `<div class="modal-dialog">
   <div class="modal-content">
     <div class="modal-header">
-      <h5 class="modal-title w-100 text-center">&#9993; Contact us &#9993;</h5>
+      <h5 class="modal-title w-100 text-center">&#9993; Contact us ;</h5>
       <button type="button" class="close" data-dismiss="modal" aria-label="close">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -70,7 +70,7 @@ contactEl.innerHTML =
       <form id = "contact-form" action = "index.html">
         <div class="form-group">
           <label for = "name-contact">Name</label>
-          <input id ="name-contact" class="form-control" type = "text" name = "name" required placeholder="Jose Markose">
+          <input id ="name-contact" class="form-control" type = "text" name = "name" required placeholder="Shubhangi Kotkar">
         </div>
         <div class="form-group">
           <label for = "email-contact">Email</label>
@@ -78,7 +78,7 @@ contactEl.innerHTML =
         </div>
         <div class="form-group">
           <label for = "phone">Mobile</label>
-          <input id ="phone" class="form-control" type ="text" name = "phone" required placeholder="(+91)__________">
+          <input id ="phone" class="form-control" type ="text" name = "phone" required placeholder="(+91):**********">
         </div>
         <div class="text-center">
           <button class="btn btn-primary rounded-pill ml-auto mr-auto" type="submit" id="contact-btn" name="submit-contact">
@@ -97,52 +97,52 @@ const loginBtn = document.getElementById("login-btn"); // Login button in the Lo
 let isLoggedIn = false; // check ------>
 
 // Event listener for click on the login button inside the login modal
-loginBtn.addEventListener("click", ()=> {
-  localStorage.setItem("Email", loginEmail.value);
-  localStorage.setItem("Password", window.btoa(loginPass.value));
-  isLoggedIn = true;
-  localStorage.setItem("Login", "true");
-  alert("Logged in");
-  headerLogin.innerText = "Logout";
+loginBtn.addEventListener("click", () => {
+    localStorage.setItem("Email", loginEmail.value);
+    localStorage.setItem("Password", window.btoa(loginPass.value));
+    isLoggedIn = true;
+    localStorage.setItem("Login", "true");
+    alert("Logged in");
+    headerLogin.innerText = "Logout";
 })
 
 // Event listener for click on the login button inside the header
 headerLogin.addEventListener("click", (event) => {
-  if(localStorage.getItem("Login") === "true"){
-    headerLogin.innerText = "Login";
-    isLoggedIn = false;
-    alert("Logged out")
-    headerLogin.dataset.target = "";
-    console.log(event)
-    localStorage.removeItem("Email");
-    localStorage.removeItem("Password");
-    localStorage.setItem("Login", "false");
-    location.reload()
-  } else {
-    headerLogin.dataset.target = "#loginModal";
-  }
+    if (localStorage.getItem("Login") === "true") {
+        headerLogin.innerText = "Login";
+        isLoggedIn = false;
+        alert("Logged out")
+        headerLogin.dataset.target = "";
+        console.log(event)
+        localStorage.removeItem("Email");
+        localStorage.removeItem("Password");
+        localStorage.setItem("Login", "false");
+        location.reload()
+    } else {
+        headerLogin.dataset.target = "#loginModal";
+    }
 })
 
 // To toggle Login button inside the header
-if(localStorage.getItem("Login") === "true"){
-  headerLogin.innerText = "Logout";
-  isLoggedIn = true;
-  headerLogin.dataset.target = "";
+if (localStorage.getItem("Login") === "true") {
+    headerLogin.innerText = "Logout";
+    isLoggedIn = true;
+    headerLogin.dataset.target = "";
 } else {
-  headerLogin.innerText = "Login";
-  headerLogin.dataset.target = "#loginModal";
+    headerLogin.innerText = "Login";
+    headerLogin.dataset.target = "#loginModal";
 }
 
 const loaderDiv = document.getElementById("loader-div"); // Loader container
 // Loader template
-const loaderTemplate = 
-`<div id="loader">
+const loaderTemplate =
+    `<div id="loader">
 <div id="loader-icon">
 </div>        
 </div>`;
 loaderDiv.innerHTML = loaderTemplate;
 
 // Event listener to remove loader when the page is loaded
-window.addEventListener("load", ()=>{
-  loaderDiv.className += " hidden";
+window.addEventListener("load", () => {
+    loaderDiv.className += " hidden";
 })
